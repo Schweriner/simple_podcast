@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2018-02-08T15:35:14Z" product-name="simple_podcast">
+		<header/>
+		<body>
+			<trans-unit id="tx_simple_podcast_domain_model_podcast">
+				<source>Podcast Channel</source>
+			</trans-unit>
+			<trans-unit id="tx_simple_podcast_domain_model_podcast.description">
+				<source>Simple Podcast Extension providing a RSS feed for iTunes, Soundcloud, Spotify and others. Also having a simple output of podcast channels using HTML5 media player. Based on Extbase and Fluid.</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcastchannel">
+				<source>Podcast Kanal</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcastchannel.channel_name">
+				<source>Name des Kanals</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcastchannel.link">
+				<source>Offizielle URL des Kanals mit http(s)</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcastchannel.subtitle">
+				<source>Untertitel</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcastchannel.image">
+				<source>Kanalbild (min. 1400x1400 max. 3000x3000)</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcastchannel.description">
+				<source>Kanalbeschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcastchannel.language">
+				<source>Sprache im Format de-de</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcastchannel.author">
+				<source>Autor des Kanals</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcastchannel.category">
+				<source>Kategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcastchannel.author_mail">
+				<source>E-Mail des Autors</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcastchannel.keywords">
+				<source>Kommaseparierte Keywords</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcastchannel.explicit">
+				<source>Nicht jugendfreie Sprache?</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcastchannel.copyright">
+				<source>Copyright des Kanals</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcastchannel.itunes_owner">
+				<source>iTunes Besitzer</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcastchannel.itunes_owner_mail">
+				<source>E-Mail des iTunes Besitzers</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcast">
+				<source>Podcast</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcast.title">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcast.link">
+				<source>URL zur zugehörigen Seite mit http(s)</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcast.description">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcast.duration">
+				<source>Dauer im Format mm:ss z.B. 13:37</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcast.keywords">
+				<source>Keywords</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcast.explicit">
+				<source>Nicht jugendfreie Sprache?</source>
+			</trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcast.image">
+                <source>Bild (min. 1400x1400 max. 3000x3000)</source>
+            </trans-unit>
+            <trans-unit id="tx_simplepodcast_domain_model_podcast.audio">
+                <source>Audiodatei</source>
+            </trans-unit>
+			<trans-unit id="tx_simplepodcast_domain_model_podcast.podcast_channel">
+				<source>Kanel dieses Podcasts</source>
+			</trans-unit>
+			<trans-unit id="podcast_pluginname">
+                <source>Podcast Kanal</source>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,24 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Function</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.channel>
+						<TCEforms>
+							<label>Podcast Channel</label>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<foreign_table>tx_simplepodcast_domain_model_podcastchannel</foreign_table>
+							</config>
+						</TCEforms>
+					</settings.channel>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

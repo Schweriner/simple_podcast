@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+
+<f:section name="main">
+
+	<f:flashMessages/>
+
+	<div class="podcast-list">
+		<f:if condition="{podcastChannel}">
+			<f:if condition="{podcastChannel.podcasts}">
+				<f:for each="{podcastChannel.podcasts}" as="podcast">
+					<div class="podcast-item">
+						<figure>
+							<f:if condition="{podcast.image}">
+								<f:then>
+									<f:image image="{podcast.image}" width="250"/>
+								</f:then>
+								<f:else>
+									<f:image image="{podcastChannel.image}" width="250"/>
+								</f:else>
+							</f:if>
+						</figure>
+						<div class="podcast-content">
+							<h3>{podcast.title}</h3>
+							<f:format.html>{podcast.description}</f:format.html>
+							<div>
+								<f:media file="{podcast.audio}" additionalConfig="{test: 'test'}"/>
+							</div>
+						</div>
+						<div class="clearer"></div>
+					</div>
+				</f:for>
+			</f:if>
+		</f:if>
+	</div>
+
+</f:section>
+</html>

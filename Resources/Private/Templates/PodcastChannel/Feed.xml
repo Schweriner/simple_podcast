@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+        <f:if condition="{channels}">
+            <f:for each="{channels}" as="channel">
+                <channel>
+                    <title>{channel.channelName}</title>
+                    <link>{channel.link}</link>
+                    <image>
+                        <url>{f:uri.image(image: channel.image, absolute: 1)}</url>
+                        <title>{channel.channelName}</title>
+                        <link>{channel.link}</link>
+                    </image>
+                    <description>
+                        {channel.description}
+                    </description>
+                    <language>{channel.language}</language>
+                    <f:if condition="{channel.copyright">
+                        <copyright>{channel.copyright}</copyright>
+                    </f:if>
+                    <f:comment><atom:link href="" rel="self" type="application/rss+xml"/></f:comment>
+                    <lastBuildDate><f:format.date format="D, d M Y H:s:00">now</f:format.date> +0100</lastBuildDate>
+                    <itunes:author>{channel.author}</itunes:author>
+                    <itunes:summary>
+                        {channel.description}
+                    </itunes:summary>
+                    <itunes:subtitle>{channel.subtitle}</itunes:subtitle>
+                    <f:if condition="{channel.itunesOwner}">
+                        <itunes:owner>
+                            <itunes:name>{channel.itunesOwner}</itunes:name>
+                            <f:if condition="{channel.itunesOwnerMail}">
+                                <itunes:email>{channel.itunesOwnerMail}</itunes:email>
+                            </f:if>
+                        </itunes:owner>
+                    </f:if>
+                    <itunes:explicit>{f:if(condition: channel.explicit, then: 'Yes', else: 'No')}</itunes:explicit>
+                    <f:if condition="{channel.keywords}">
+                        <itunes:keywords>
+                            {channel.keywords}
+                        </itunes:keywords>
+                    </f:if>
+                    <itunes:image href="{f:uri.image(image: channel.image, absolute: 1)}"/>
+                    <itunes:category text="{channel.category -> f:format.htmlentities()}"/>
+                    <f:if condition="{channel.podcasts}">
+                        <f:for each="{channel.podcasts}" as="podcast">
+                            <item>
+                                <title>{podcast.title}</title>
+                                <link>{podcast.link}</link>
+                                <pubDate><f:format.date format="D, d M Y H:s:00">{podcast.crdate}</f:format.date> GMT</pubDate>
+                                <description>
+                                    {podcast.description}
+                                </description>
+                                <enclosure url="{f:uri.image(image: podcast.audio, absolute: 1)}" length="{podcast.audio.originalResource.size}" type="{podcast.audio.originalResource.mimeType}"/>
+                                <guid>
+                                    {f:uri.image(image: podcast.audio, absolute: 1)}
+                                </guid>
+                                <f:if condition="{podcast.duration}">
+                                    <itunes:duration>{podcast.duration}</itunes:duration>
+                                </f:if>
+                                <itunes:summary>
+                                    {podcast.description}
+                                </itunes:summary>
+                                <f:if condition="{podcast.image}">
+                                    <itunes:image href="{f:uri.image(image: podcast.image, absolute: 1)}"/>
+                                </f:if>
+                                <f:if condition="{podcast.keywords}">
+                                    <itunes:keywords>
+                                        {podcast.keywords}
+                                    </itunes:keywords>
+                                </f:if>
+                                <itunes:explicit>{f:if(condition: podcast.explicit, then: 'Yes', else: 'No')}</itunes:explicit>
+                            </item>
+                        </f:for>
+                    </f:if>
+                </channel>
+            </f:for>
+        </f:if>
+</rss>
